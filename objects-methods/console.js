@@ -45,7 +45,7 @@ let characters = [
     house: "Snow",
   },
 ];
-
+console.log("hi");
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
   let hasChildren = false;
