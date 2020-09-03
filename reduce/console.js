@@ -1,11 +1,55 @@
 /* eslint-disable quotes */
-const reversedString = (str) => {
+const characters = [
+  {
+    name: "Eddard",
+    spouse: "Catelyn",
+    children: ["Robb", "Sansa", "Arya", "Bran", "Rickon"],
+    house: "Stark",
+  },
+  {
+    name: "Jon",
+    spouse: "Lysa",
+    children: ["Robin"],
+    house: "Arryn",
+  },
+  {
+    name: "Cersei",
+    spouse: "Robert",
+    children: ["Joffrey", "Myrcella", "Tommen"],
+    house: "Lannister",
+  },
+  {
+    name: "Daenarys",
+    spouse: "Khal Drogo",
+    children: ["Drogon", "Rhaegal", "Viserion"],
+    house: "Targaryen",
+  },
+  {
+    name: "Mace",
+    spouse: "Alerie",
+    children: ["Margaery", "Loras"],
+    house: "Tyrell",
+  },
+  {
+    name: "Sansa",
+    spouse: "Tyrion",
+    house: "Stark",
+  },
+  {
+    name: "Jon",
+    spouse: null,
+    house: "Snow",
+  },
+];
+
+const extractChildren = (arr) => {
   // Solution code here...
-  let arr = str.split("");
+  arr = arr.filter((item) => item.name.includes("a"));
   return arr.reduce(
-    (acc, val, index, arr) => acc.concat(arr[arr.length - index - 1]),
-    ""
+    (acc, val) =>
+      val.hasOwnProperty("children") ? [...acc, ...val.children] : acc,
+    []
   );
 };
 
-console.log(reversedString("Code 301"));
+console.log(extractChildren(characters));
