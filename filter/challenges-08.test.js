@@ -121,18 +121,22 @@ const snorlaxData = {
 
 const getBaseStatGreaterThan = (arr, minBaseStat) => {
   // Solution code here...
+  return arr.filter((item) => minBaseStat < item.baseStat);
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
 
-Write a function named getStatName that is an extension of your getBaseStatGreaterThan function from challenge 4. For this function, extend your solution from challenge 4 to only return the name of the stat, rather than the entire stat object.
+Write a function named getStatName that is an extension of your getBaseStatGreaterThan function from challenge 4.
+For this function, extend your solution from challenge 4 to only return the name of the stat, rather than the entire stat object.
 
 For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 'special-attack'].
 ------------------------------------------------------------------------------------------------ */
 
 const getStatName = (arr, minBaseStat) => {
   // Solution code here...
+  let result = arr.filter((item) => item.baseStat >= minBaseStat);
+  return result.map((item) => item.stat.name);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -330,7 +334,7 @@ describe("Testing challenge 4", () => {
   });
 });
 
-xdescribe("Testing challenge 5", () => {
+describe("Testing challenge 5", () => {
   test("It should return an array containing the stats that are greater than the input", () => {
     expect(getBaseStatGreaterThan(snorlaxData.stats, 75)).toStrictEqual([
       {
@@ -362,7 +366,7 @@ xdescribe("Testing challenge 5", () => {
   });
 });
 
-xdescribe("Testing challenge 6", () => {
+describe("Testing challenge 6", () => {
   test("It should return the name of the stats that exceed that maximum", () => {
     expect(getStatName(snorlaxData.stats, 50)).toStrictEqual([
       "special-defense",
