@@ -11,3 +11,7 @@ We have an array that we need to reverse it for example [1,2,3] => [3,2,1]
 3. change decrement the counter and repeat the process.
 
 **_ the solution in array-reverse.test.js_**
+
+# solution
+
+![whiteboard](./whiteboard.jpg)
