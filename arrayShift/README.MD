@@ -15,3 +15,7 @@ Algorithm:
 3.  if reach the right index then insert the passed value
 
 **_ the solution in array-reverse.test.js_**
+
+# solution
+
+![whiteboard](./whiteboard.jpg)
