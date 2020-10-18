@@ -39,3 +39,32 @@ describe("toString()", () => {
     expect(ll.toString()).toEqual(`1->2->3->null`);
   });
 });
+describe("insertAfter", () => {
+  const ll = new LinkedList();
+  ll.insert(1);
+  ll.insert(2);
+  ll.insert(3);
+
+  it("should return value is not valid if given value is not found", () => {
+    expect(ll.insertAfter(4, 7)).toEqual(`value is not valid`);
+  });
+  it("should return value is not valid if given value is not found", () => {
+    ll.insert(4);
+    expect(ll.insertAfter(4, 7)).toEqual(`1->2->3->4->7->null`);
+  });
+});
+
+describe("insertBefore", () => {
+  const ll = new LinkedList();
+  ll.insert(1);
+  ll.insert(2);
+  ll.insert(3);
+
+  it("should return value is not valid if given value is not found", () => {
+    expect(ll.insertBefore(4, 7)).toEqual(`value is not valid`);
+  });
+  it("should return value is not valid if given value is not found", () => {
+    ll.insert(4);
+    expect(ll.insertBefore(4, 7)).toEqual(`1->2->3->7->4->null`);
+  });
+});
