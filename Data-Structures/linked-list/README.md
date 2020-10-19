@@ -12,11 +12,15 @@ day 1 :
 - includes(): check ifthe given value is found
 - toString(): log the linked list as 1->2->3->null
 
--day 2 :
+day 2 :
 
 - insertBefore(value, newVal): which add a new node with the given newValue immediately before the first value node
 - insertAfter(value, newVal): which add a new node with the given newValue immediately after the first value node
 - insertAtStart(value): which adds a new node with the given value to the start of the list
+
+day 3 :
+
+kthFromEnd(k) : find the last k node from the linked list
 
 ## Approach & Efficiency & ## API
 
@@ -31,3 +35,4 @@ day 1 :
 - insertAtStart(value): create new node and and let next of the new node = of old head and assign the head to the new node (big = 1)
 
 ![](whiteborad.jpg)
+![](whiteborad2.jpg)
