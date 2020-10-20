@@ -74,7 +74,6 @@ class LinkedList {
     const newNode = new NodeClass(newVal);
     current.next = newNode;
     newNode.next = temp;
-    console.log(temp);
     this.size++;
     return this.toString();
   }
@@ -96,14 +95,12 @@ class LinkedList {
     if (temp === null) {
       this.size++;
       current.next = new NodeClass(newVal);
-      console.log(this);
       return this.toString();
     }
     this.size++;
     const newNode = new NodeClass(newVal);
     current.next = newNode;
     newNode.next = temp;
-    console.log(temp);
     return this.toString();
   }
   insertAtStart(value) {
@@ -123,32 +120,45 @@ class LinkedList {
       current = current.next;
     }
     arr[arr.length] = current.value;
-    console.log(arr);
     return arr[arr.length - 1 - k];
+  }
+  toArray() {
+    try {
+      const arr = [];
+      let current = this.head;
+      while (current.next) {
+        arr[arr.length] = current.value;
+        current = current.next;
+      }
+      arr[arr.length] = current.value;
+      return arr;
+    } catch (error) {
+      return [];
+    }
   }
   isEmpty() {
     return this.size === 0 ? true : false;
   }
 }
 const ll = new LinkedList();
-// ll.insertAtStart(0);
-// ll.insert(7);
+
 ll.append(1);
-console.log(ll.insert(2));
-ll.insert(7);
+ll.insert(2);
 ll.append(3);
 ll.append(4);
 ll.append(5);
-console.log(ll.kthFromEnd(0));
-// console.log(ll.insertBefore(4, 7));
-// console.log(ll.insertAfter(4, 7));
-// console.log(ll.insertAfter(3, 7));
-// console.log(ll.includes(5));
 
-// console.log(ll.toString());
-console.log(ll.size);
-// console.log(ll);
-// console.log(ll);
+const ll2 = new LinkedList();
+
+ll2.append(6);
+ll2.append(7);
+ll2.append(8);
+ll2.append(9);
+ll2.append(10);
+
+// console.log(ll.kthFromEnd(0));
+
+// console.log(ll.size);
 
 // console.log(LinkedList);
 module.exports = LinkedList;

@@ -36,3 +36,4 @@ kthFromEnd(k) : find the last k node from the linked list
 
 ![](whiteborad.jpg)
 ![](whiteborad2.jpg)
+![](zipll.jpg)
