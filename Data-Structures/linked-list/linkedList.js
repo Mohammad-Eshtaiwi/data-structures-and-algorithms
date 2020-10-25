@@ -23,15 +23,19 @@ class LinkedList {
     return this.head;
   }
   insert(value) {
-    if (this.isEmpty()) return "append value first then try this again";
-    const temp = this.head.next;
     const newNode = new NodeClass(value);
+    if (this.isEmpty()) {
+      this.head = newNode;
+      return this.toString();
+    }
+    const temp = this.head.next;
     newNode.next = temp;
     this.head.next = newNode;
     return this.toString();
   }
   includes(value) {
     let current = this.head;
+    // console.log(current);
     if (current.value === value) {
       return true;
     }
@@ -59,15 +63,25 @@ class LinkedList {
   }
   insertBefore(value, newVal) {
     if (!this.includes(value)) return "value is not valid";
-
     let current = this.head;
     // if the value is in head then skip while loop
-    if (current.value === value) 1 + 1;
+
+    if (current.value === value) {
+      const temp = this.head;
+      const newNode = new NodeClass(newVal);
+      newNode.next = temp;
+      this.head = newNode;
+      return this.toString();
+    }
     // else find the desired value
     else {
       while (current.next) {
-        current = current.next;
+        console.log("__while");
+
+        console.log("__while");
+        if (current.next === null) break;
         if (current.next.value === value) break;
+        current = current.next;
       }
     }
     const temp = current.next;
@@ -142,11 +156,15 @@ class LinkedList {
 }
 const ll = new LinkedList();
 
+// ll.insert(1);
+// ll.insert(2);
+// ll.insert(3);
 ll.append(1);
-ll.insert(2);
+ll.append(2);
 ll.append(3);
-ll.append(4);
-ll.append(5);
+console.log(ll.insertBefore(1, 0));
+// console.log(ll.includes(5));
+console.log(ll.toString());
 
 const ll2 = new LinkedList();
 
@@ -155,6 +173,52 @@ ll2.append(7);
 ll2.append(8);
 ll2.append(9);
 ll2.append(10);
+
+// console.log(reverse(ll));
+// function reverse(lltoRev) {
+//   console.log(lltoRev);
+//   const arr = [];
+
+//   let current = lltoRev.head;
+
+//   arr[arr.length] = current.value;
+
+//   while (current.next) {
+//     current = current.next;
+
+//     arr[arr.length] = current.value;
+//   }
+
+//   arr[arr.length] = current.value;
+
+//   let llNew = new LinkedList();
+
+//   for (let index = arr.length - 1; index > -1; index--) {
+//     console.log(index);
+//     llNew.append(arr[index - 1]);
+//   }
+//   return llNew.toString();
+// }
+
+// function palindrome(ll) {
+//   let arr = [];
+//   let newArr = [];
+//   let currentNode = this.head;
+//   while (currentNode.value) {
+//     arr[arr.length] = currentNode.value;
+//     currentNode = currentNode.next;
+//   }
+//   for (let i = arr.length - 1; i >= 0; i--) {
+//     newArr[newArr.length] = arr[i];
+//   }
+//   for (let j = 0; j < arr.length; j++) {
+//     if ((arr[j] = !newArr[j])) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// palindrome(ll);
 
 // console.log(ll.kthFromEnd(0));
 
