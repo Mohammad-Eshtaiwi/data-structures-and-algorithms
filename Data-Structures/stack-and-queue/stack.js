@@ -22,7 +22,7 @@ class Stack {
       this.top = this.top.next;
       return poped;
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
       return error.message;
     }
   }
@@ -31,7 +31,7 @@ class Stack {
       if (this.isEmpty()) throw Error("this stack is empty");
       return this.top.value;
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
       return error.message;
     }
   }
@@ -47,5 +47,7 @@ module.exports = Stack;
 // console.log(stack.push(2));
 // console.log(stack.pop());
 // console.log(stack.pop());
+// console.log(stack.pop());
+
 // console.log(stack.peek());
 // console.log(stack.peek());
