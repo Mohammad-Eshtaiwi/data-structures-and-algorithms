@@ -20,9 +20,9 @@ describe("append()", () => {
   });
 });
 describe("inderst()", () => {
-  it("should return eeror message if called when the ll is empty", () => {
+  it("should return add value at the start", () => {
     const ll = new LinkedList();
-    expect(ll.insert(1)).toEqual(`append value first then try this again`);
+    expect(ll.insert(1)).toEqual(`1->null`);
   });
   it("should add new node after the head", () => {
     const ll = new LinkedList();
