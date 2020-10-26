@@ -64,15 +64,15 @@ class Queue {
   }
 }
 
-const queue = new Queue();
-console.log(queue.isEmpty());
-console.log(queue.enqueue(1));
-console.log(queue.enqueue(2));
-console.log(queue.enqueue(3));
+// const queue = new Queue();
+// console.log(queue.isEmpty());
+// console.log(queue.enqueue(1));
+// console.log(queue.enqueue(2));
+// console.log(queue.enqueue(3));
 
-console.log(queue.peek());
-console.log(queue.peek());
-console.log(queue.peek());
+// console.log(queue.peek());
+// console.log(queue.peek());
+// console.log(queue.peek());
 // console.log(queue.dnqueue());
 // console.log(queue.dnqueue());
 // console.log(queue.dnqueue());
