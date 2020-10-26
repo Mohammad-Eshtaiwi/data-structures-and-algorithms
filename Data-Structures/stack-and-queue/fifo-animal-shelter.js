@@ -78,3 +78,5 @@ shelter.enqueue("cat");
 
 console.log("__shelter", shelter.shelter);
 console.log(shelter.dog);
+
+module.exports = AnimalShelter;
