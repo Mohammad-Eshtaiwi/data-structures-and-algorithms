@@ -57,3 +57,4 @@ get the last element in the list return the
 ![](Stack.jpg)
 ![](Queue.jpg)
 ![](PseudoQueue.jpg)
+![](animalLab.jpg)
