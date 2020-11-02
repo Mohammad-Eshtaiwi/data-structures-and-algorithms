@@ -82,6 +82,7 @@ console.log(bst);
 console.log(bst.inOrder());
 console.log(bst.contain(7));
 console.log("max", bst.maximumValue());
+console.log("breadthFirst", bst.breadthFirst());
 // 1 3 4 6 7 8 10 14 13
 // let emptyTree = new BinarySearchTree();
 // console.log(emptyTree.maximumValue());
