@@ -47,6 +47,22 @@ class BinarySearchTree extends Tree {
     }
     return false;
   }
+  maximumValue(currentNode = this.root, max) {
+    if (this.root.value === null) return "this tree is empty";
+
+    if (currentNode === this.root) max = currentNode.value;
+    // if (!currentNode.right) return max;
+    if (currentNode.value > max) {
+      max = currentNode.value;
+    }
+    if (currentNode.right) {
+      max = this.maximumValue(currentNode.right, max);
+    }
+    //  else if (currentNode.left) {
+    //   max = this.maximumValue(currentNode.left, max);
+    // }
+    return max;
+  }
 }
 
 const bst = new BinarySearchTree();
@@ -65,6 +81,8 @@ console.log(bst.root);
 console.log(bst);
 console.log(bst.inOrder());
 console.log(bst.contain(7));
+console.log("max", bst.maximumValue());
 // 1 3 4 6 7 8 10 14 13
-
+// let emptyTree = new BinarySearchTree();
+// console.log(emptyTree.maximumValue());
 module.exports = BinarySearchTree;
