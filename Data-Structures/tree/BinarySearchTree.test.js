@@ -26,4 +26,11 @@ describe("binary tree", () => {
   it("it return false if passed uncontained value", () => {
     expect(bst.contain(0)).toEqual(false);
   });
+  it("it return the maximum value", () => {
+    expect(bst.maximumValue()).toEqual(14);
+  });
+  it("maximumValue shoud return massage say empty tree", () => {
+    let emptyTree = new BinarySearchTree();
+    expect(emptyTree.maximumValue()).toEqual("this tree is empty");
+  });
 });

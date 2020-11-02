@@ -29,4 +29,24 @@ return array represent the tree based on root > left > right (log n)
 ### postOrder()
 
 return array represent the tree based on left > right > root (log n)
+
+### postOrder()
+
+return array represent the tree based on left > right > root (log n)
+
+### max
+
+- create method called maximumValue that take 2 agreements max and current node
+
+- current node will start from the root and if the root value is null then return error message
+
+- assign the max to the root value
+
+- if there is no right return the max
+
+- always check if there is right and if that true return a call to the max function again and pass the current max and the right node to it
+
+- at the end return max
+
 ![](Whiteboard1.jpg)
+![](Whiteboard2.jpg)
