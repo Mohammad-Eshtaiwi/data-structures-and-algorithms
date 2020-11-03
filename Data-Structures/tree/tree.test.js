@@ -1,5 +1,6 @@
 /* eslint-disable quotes */
 const { BinaryTree, Node } = require("./tree");
+const fizzbuzzTree = require("./FizzBuzzTree");
 
 describe("binary tree", () => {
   let tree = null;
@@ -27,7 +28,7 @@ describe("binary tree", () => {
     const expected = [4, 2, 5, 1, 3];
     expect(tree.inOrder()).toEqual(expected);
   });
-  it("should ", () => {
+  it("should read the tree line by line", () => {
     const one = new Node(2);
     const two = new Node(7);
     const three = new Node(5);
@@ -50,5 +51,20 @@ describe("binary tree", () => {
     const expected = [2, 7, 5, 2, 6, 9, 5, 11, 4];
 
     expect(tree.breadthFirst()).toEqual(expected);
+  });
+  it("should apply fizzbuzz function on the tree andd", () => {
+    const expectedTree = fizzbuzzTree(tree);
+    console.log("expectedTreeexpectedTree", expectedTree.inOrder());
+    expect(expectedTree.inOrder()).toEqual([
+      "2",
+      "7",
+      "Buzz",
+      "Fizz",
+      "11",
+      "2",
+      "Buzz",
+      "4",
+      "Fizz",
+    ]);
   });
 });
