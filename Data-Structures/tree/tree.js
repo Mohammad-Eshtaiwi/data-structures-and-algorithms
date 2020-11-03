@@ -53,6 +53,7 @@ class BinaryTree {
         if (node.right) nodes[nodes.length] = node.right;
       }
       if (nodes.length === 0 && node !== this.root) return;
+      if (node === this.root && !this.root.left && !this.root.right) return;
       return _walk(nodes);
     };
     _walk(this.root);
