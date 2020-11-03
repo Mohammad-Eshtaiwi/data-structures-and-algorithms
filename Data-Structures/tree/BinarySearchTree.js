@@ -65,24 +65,24 @@ class BinarySearchTree extends Tree {
   }
 }
 
-const bst = new BinarySearchTree();
+// const bst = new BinarySearchTree();
 
-bst.add(8);
-bst.add(3);
-bst.add(10);
-bst.add(1);
-bst.add(6);
-bst.add(4);
-bst.add(7);
-bst.add(14);
-bst.add(13);
+// bst.add(8);
+// bst.add(3);
+// bst.add(10);
+// bst.add(1);
+// bst.add(6);
+// bst.add(4);
+// bst.add(7);
+// bst.add(14);
+// bst.add(13);
 
-console.log(bst.root);
-console.log(bst);
-console.log(bst.inOrder());
-console.log(bst.contain(7));
-console.log("max", bst.maximumValue());
-console.log("breadthFirst", bst.breadthFirst());
+// console.log(bst.root);
+// console.log(bst);
+// console.log(bst.inOrder());
+// console.log(bst.contain(7));
+// console.log("max", bst.maximumValue());
+// console.log("breadthFirst", bst.breadthFirst());
 // 1 3 4 6 7 8 10 14 13
 // let emptyTree = new BinarySearchTree();
 // console.log(emptyTree.maximumValue());

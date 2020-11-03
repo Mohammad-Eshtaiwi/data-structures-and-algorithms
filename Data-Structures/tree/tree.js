@@ -53,6 +53,7 @@ class BinaryTree {
         if (node.right) nodes[nodes.length] = node.right;
       }
       if (nodes.length === 0 && node !== this.root) return;
+      if (node === this.root && !this.root.left && !this.root.right) return;
       return _walk(nodes);
     };
     _walk(this.root);
@@ -60,24 +61,24 @@ class BinaryTree {
   }
 }
 
-// const one = new Node(1);
-// const two = new Node(2);
-// const three = new Node(3);
-// const four = new Node(4);
-// const five = new Node(5);
-const one = new Node(2);
-const two = new Node(7);
-const three = new Node(5);
-const four = new Node(2);
-const five = new Node(6);
-const six = new Node(9);
-const seven = new Node(5);
-const eight = new Node(11);
-const nine = new Node(4);
-five.left = seven;
-five.right = eight;
-six.left = nine;
-three.right = six;
+const one = new Node(1);
+const two = new Node(2);
+const three = new Node(3);
+const four = new Node(4);
+const five = new Node(5);
+// const one = new Node(2);
+// const two = new Node(7);
+// const three = new Node(5);
+// const four = new Node(2);
+// const five = new Node(6);
+// const six = new Node(9);
+// const seven = new Node(5);
+// const eight = new Node(11);
+// const nine = new Node(4);
+// five.left = seven;
+// five.right = eight;
+// six.left = nine;
+// three.right = six;
 
 const tree = new BinaryTree(one);
 one.left = two;
@@ -85,6 +86,6 @@ one.right = three;
 two.left = four;
 two.right = five;
 
-console.log(tree.breadthFirst());
+console.log(tree.inOrder());
 
 module.exports = { BinaryTree, Node };

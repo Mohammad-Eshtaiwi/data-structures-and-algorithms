@@ -50,3 +50,5 @@ return array represent the tree based on left > right > root (log n)
 
 ![](Whiteboard1.jpg)
 ![](Whiteboard2.jpg)
+![](breadthFirst.jpg)
+![](FizzBuzzTree.jpg)
