@@ -27,9 +27,11 @@ class HashMap {
       const ll = new LinkedList();
       ll.prepend({ [key]: value });
       this.storage[index] = ll;
+      return this.storage[index];
     } else {
       // we already have a value at this index
       this.storage[index].prepend({ [key]: value });
+      return this.storage[index];
     }
   }
   contain(key) {
@@ -44,18 +46,17 @@ class HashMap {
   }
 }
 
-const hashmap = new HashMap(4000);
+// const hashmap = new HashMap(4000);
 // hashmap.add("name");
 // hashmap.add("one", "thing");
 // hashmap.add("eno", "1");
 // hashmap.add("neo", "2");
-hashmap.add("this", "nothing");
+// hashmap.add("this", "nothing");
 // console.log(hashmap.contain("this"));
 // console.log(hashmap.contain("moohahahaha"));
-console.log(hashmap.get("this"));
-let hi = hashmap.get("this");
-debugger;
-console.log(hi.get({ ["this"]: "nothing" }));
+// console.log(hashmap.get("this"));
+// let hi = hashmap.get("this");
+// console.log(hi.get({ ["this"]: "nothing" }));
 // console.log(hashmap.get("moohahahaha"));
 // console.log(hashmap.storage);
 
