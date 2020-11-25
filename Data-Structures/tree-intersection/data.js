@@ -1,7 +1,5 @@
 /* eslint-disable quotes */
 const { BinaryTree, Node: MyNode } = require("../tree/tree");
-const HashMap = require("../hash-table/hashTable");
-
 // bulid first tree
 let one = new MyNode(150);
 let two = new MyNode(100);
@@ -53,20 +51,4 @@ seven.right = eleven;
 
 const t2 = new BinaryTree(one);
 
-function treeIntersection(t1, t2) {
-  let unique = [];
-  const hashMap = new HashMap(t1.length + t2.length);
-  for (let i = 0; i < t1.length; i++) hashMap.add(t1[i], t1[i]);
-  for (let i = 0; i < t2.length; i++) hashMap.add(t2[i], t2[i]);
-  for (let i = 0; i < hashMap.storage.length; i++) {
-    if (hashMap.storage[i]) {
-      if (hashMap.storage[i].size > 1)
-        unique[unique.length] = Object.values(hashMap.storage[i].head.value)[0];
-    }
-  }
-  console.log(unique);
-  return unique;
-}
-
-treeIntersection(t1.breadthFirst(), t2.breadthFirst());
-module.exports = treeIntersection;
+module.exports = { t1, t2 };
