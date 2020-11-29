@@ -1,0 +1,14 @@
+
+GetNeighbors(node) {
+    let neighbors = [];
+    this.adjacencyList.forEach((item) => {
+      //   if (item.vertex.value === node.value) neighbors[neighbors.length] = item;
+      console.log(item[0].vertex);
+    });
+    // for (const [vertex, edge] of this.adjacencyList.entries()) {
+    // }
+    return neighbors;
+  }
+  Size() {
+    return this.size;
+  }
